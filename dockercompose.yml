@@ -1,0 +1,16 @@
+version: `3.12.5`
+services:
+  django:
+    build:
+      context:
+        dockerfile: Dockerfile
+  command: python /app/app/manage.py runserver 0.0.0.0.8006
+  ports:
+    - :  "8006:8000"
+  volumes:
+    - .:/app
+  environment:
+    -PYTHONUNBUFFERED=1
+  -DJANGO_SETTINGS_MODULE=app.app.settings
+
+

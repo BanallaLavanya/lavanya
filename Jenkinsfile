@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment{
-        DOCKER_IMAGE_NAME = "django_cicd-django"
+        DOCKER_IMAGE_NAME = "django"
     }
 
     stages {
